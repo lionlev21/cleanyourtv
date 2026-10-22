@@ -111,7 +111,7 @@ public final class LauncherSettingsActivity extends Activity {
             open(new Intent(Settings.ACTION_HOME_SETTINGS));
         });
         findViewById(R.id.tvSettingsChoice).setOnClickListener(v ->
-                open(new Intent(Settings.ACTION_SETTINGS)));
+                open(SystemSettings.intent(this, Settings.ACTION_SETTINGS)));
         findViewById(R.id.tvButtonChoice).setOnClickListener(v -> TvButtonSettings.show(this));
         refresh();
         columnChoices[Math.max(0, Math.min(columns - 4, 3))].requestFocus();
